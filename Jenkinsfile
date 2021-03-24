@@ -76,7 +76,7 @@ pipeline {
 				}
 			}
 		}
-		stage('Run Clean Environment') {
+		stage('Run final Clean Environment') {
 			steps {
 				script {
 					sh 'docker compose down'
