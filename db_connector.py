@@ -8,7 +8,7 @@ DB = 'jC9okm9Ppe'
 
 def get_user_name_from_db(user_id):
     # Establishing a connection to DB
-    conn = pymysql.connect(host='$HOST', port= '$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
+    conn = pymysql.connect(host='$HOST', port='$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
     # Getting a cursor from Database
     cursor = conn.cursor()
     cursor.execute("select user_name from jC9okm9Ppe.users where user_id = %s ;", user_id)
