@@ -10,7 +10,7 @@ pipeline {
 				script {
 					properties([pipelineTriggers([pollSCM('* * * * *')])])
 				}
-				git 'https://github.com/udisco/DevopsExperts.git'
+				git 'https://github.com/udisco/project-part4.git'
 			}
 		}
 		stage('install dependencies') {
