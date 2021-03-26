@@ -1,3 +1,3 @@
 FROM python:3.9.2-buster
-COPY getUser.py
-CMD ['python3','getUser.py']
+ADD ./rest_app.py /
+CMD ['python3','./rest_app.py']

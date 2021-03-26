@@ -30,7 +30,7 @@ pipeline {
 		stage('Run Backend Testing') {
 			steps {
 				script {
-					sh 'python3 backend_tesing.py'
+					sh 'python3 backend_testing.py'
 				}
 			}
 		}
@@ -44,7 +44,7 @@ pipeline {
         stage('Build Docker Image') {
 			steps {
 				script {
-					sh 'docker build -t'
+					sh 'docker build -t 'docker_rest' .'
 				}
 			}
 		}
