@@ -1,7 +1,7 @@
 from datetime import datetime
 import pymysql
 HOST = 'remotemysql.com'
-PORT = '3306'
+PORT = int('3306')
 USER = 'jC9okm9Ppe'
 PASSWORD = 'LBIGnhlfpI'
 DB = 'jC9okm9Ppe'
