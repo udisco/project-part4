@@ -1,7 +1,7 @@
 from datetime import datetime
 import pymysql
 HOST = 'remotemysql.com'
-PORT = int(3306)
+PORT = 3306
 USER = 'jC9okm9Ppe'
 PASSWORD = 'LBIGnhlfpI'
 DB = 'jC9okm9Ppe'
@@ -25,7 +25,7 @@ def add_user_name_to_db(user_id, user_name):
     try:
         now = datetime.now()
         # Establishing a connection to DB
-        conn = pymysql.connect(host='$HOST', port= '$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
+        conn = pymysql.connect(host='$HOST', port='$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
         conn.autocommit(True)
     # Getting a cursor from Database
         cursor = conn.cursor()
@@ -45,7 +45,7 @@ def update_user_name_in_db(user_id, user_name):
     try:
 
         # Establishing a connection to DB
-        conn = pymysql.connect(host='$HOST', port= '$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
+        conn = pymysql.connect(host='$HOST', port='$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
         conn.autocommit(True)
         # Getting a cursor from Database
         cursor = conn.cursor()
@@ -68,7 +68,7 @@ def delete_user_name_from_db(user_id):
     # is_success = True
     try:
         # Establishing a connection to DB
-        conn = pymysql.connect(host='$HOST', port= '$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
+        conn = pymysql.connect(host='$HOST', port='$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
         conn.autocommit(True)
         # Getting a cursor from Database
         cursor = conn.cursor()
@@ -87,7 +87,7 @@ def delete_user_name_from_db(user_id):
 
 def get_all_user_id_from_db():
     # Establishing a connection to DB
-    conn = pymysql.connect(host='$HOST', port= '$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
+    conn = pymysql.connect(host='$HOST', port='$PORT', user='$USER', passwd='$PASSWORD', db='$DB')
     # Getting a cursor from Database
     cursor = conn.cursor()
     cursor.execute("select user_id from jC9okm9Ppe.users")
