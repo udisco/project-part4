@@ -10,7 +10,7 @@ pipeline {
 				script {
 					properties([pipelineTriggers([pollSCM('* * * * *')])])
 				}
-				git 'https://github.com/udisco/project-part4.git'
+				git 'https://github.com/udisco/project-part4mmmmm,,,...git'
 			}
 		}
 		stage('install dependencies') {
@@ -44,7 +44,7 @@ pipeline {
         stage('Build Docker Image') {
 			steps {
 				script {
-					sh 'docker build -t 'docker_rest' .'
+					sh 'docker build -t docker_rest:docker_rest .'
 				}
 			}
 		}
