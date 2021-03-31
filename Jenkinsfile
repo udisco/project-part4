@@ -51,7 +51,7 @@ pipeline {
 		stage('Push Docker Image to Hub') {
 			steps {
 				script {
-					sh 'docker push udisco/docker_rest:docker_rest'
+					sh 'docker push udisco/docker_rest'
 				}
 			}
 		}
