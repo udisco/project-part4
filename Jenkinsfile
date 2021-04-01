@@ -44,14 +44,14 @@ pipeline {
         stage('Build Docker Image') {
 			steps {
 				script {
-					sh 'docker build -t docker_rest:docker_rest .'
+					sh 'docker build -t udisco/docker_rest:docker_rest .'
 				}
 			}
 		}
 		stage('Push Docker Image to Hub') {
 			steps {
 				script {
-					sh 'docker push udisco/docker_rest'
+					sh 'docker push udisco/docker_rest:docker_rest'
 				}
 			}
 		}
