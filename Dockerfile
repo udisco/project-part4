@@ -1,3 +1,5 @@
-FROM python:3.9.2-buster
-ADD ./rest_app.py /
-CMD ['python3','./rest_app.py']
+FROM python:3.9-alpine3.12
+ADD rest_app.py db_connector.py /
+RUN pip install flask requests pymysql
+EXPOSE 5000:5000
+CMD ["python", "./rest_app.py"]
